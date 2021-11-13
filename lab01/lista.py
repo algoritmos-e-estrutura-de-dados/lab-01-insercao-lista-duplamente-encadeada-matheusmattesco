@@ -27,6 +27,7 @@ class Lista:
 
         self.tail.next = node
         node.prev = self.tail
+        self.tail = node
 
 
     def add(self, node):
@@ -41,6 +42,7 @@ class Lista:
             self.tail = node
             return
 
+        self.init.prev = node
         node.next = self.init
         self.init = node
 
